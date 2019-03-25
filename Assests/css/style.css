@@ -103,9 +103,11 @@ h1, hr{
 
 
 }
-.gallery {
+.gallery{
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 
 }
 .gallery a{
@@ -211,6 +213,9 @@ footer{
         width: 100%;
 
     }
+    nav{
+        margin: 0;
+    }   
     section,
     header{
         width: 960px;
@@ -218,6 +223,7 @@ footer{
     }
     .gallery {
         display: flex;
+        align-items: center;
         justify-content: center;
     }
     .gallery figure figcaption{
@@ -233,21 +239,24 @@ footer{
 
 
 @media(max-width: 768px){
-    .logo,
-    .navbar,
-    nav,
-    nav li,{
-    
-    }
     section,
     header{
         width: 768px;
         margin: 0 auto;
     }
-    .gallery{
+    nav{
+        margin: 0;
+    }
+    .gallery
+    {
         display: flex;
         flex-direction: column;
-
+        justify-content: center;
+        align-items: center;
+    }    
+    .gallery figure figcaption{
+            align-items: center;
+        } 
 
 
 
@@ -255,13 +264,15 @@ footer{
 
 
  @media(max-width: 640px){
+    header,
     .logo,
-    .nav,
+    nav,
     section .self{
         float: none;
         text-align: center;
     
     }
+
     
     }
     section,
@@ -269,24 +280,6 @@ footer{
         width: 640px;
         margin: 0 auto;
     }
-    
-  
-    }
-    .gallery{
-        justify-content: center;
-      
-    }
-    .gallery figure figcaption{
-        width: 30%;
-        
-        
-
-        
-
-         
-    } 
-
-
 
 
 }
